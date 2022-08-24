@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>Tutor FyM</title>
+        <link href="styles/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Tutor FyM</h1>
+        <img src="images/portada.jpg" width=590px alt="Mi imagen de prueba">
+        <p>Tutor FyM, te ayuda en la preparación para tus examenes de</p>
+        <ul>
+            <li>Física</li>
+            <li>Matemáticas</li>
+        </ul>
+        <p>con cursos, listas de ejercicios.</p>
+        <a href="https://www.facebook.com/TutorFym">Página de Facebook</a>   
+        <section id="proyectos"></section>
+        <script src="scripts/main.js"></script>
+    </body>
+    <button>Change user</button>
+    <script>
+        const datos = [{
+            img: 'https://cdn.pixabay.com/photo/2017/08/16/17/16/flower-of-life-2648527_960_720.png',
+            desc: 'Álgebra'
+        },
+        {
+            img: 'https://cdn.pixabay.com/photo/2017/08/16/17/16/flower-of-life-2648527_960_720.png',         
+            desc: 'Cálculo'
+        },
+        {
+            img: 'https://cdn.pixabay.com/photo/2017/08/16/17/16/flower-of-life-2648527_960_720.png',
+            desc: 'Programación'
+        },
+        {
+            img: 'https://cdn.pixabay.com/photo/2017/08/16/17/16/flower-of-life-2648527_960_720.png',
+            desc: 'Física'
+        }]
+        console.log('hello word');
+        let proyectos = document.querySelector('#proyectos');
+        proyectos.style.background = 'red';
+
+        function dinamico(src, desc) {
+            let div = document.createElement("div");
+            let img = document.createElement("img");
+            img.src = src;
+            let p = document.createElement("p");
+            p.innerHTML = desc;
+            div.appendChild(img);
+            div.appendChild(p);
+            proyectos.appendChild(div);
+        }
+        datos.forEach(({img,desc}) => dinamico(img,desc));
+    </script>
+</html>
