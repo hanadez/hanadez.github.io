@@ -1,38 +1,116 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 html {
-    font-size: 10px; /*px significa "píxeles": el tamaño de fuente base ahora es de 10 píxeles de alto*/
-    font-family: "Open Sans", sans-serif; /*este debería ser el resto de la salida que obtuviste de las fuentes de Google*/
-    background-color: #00539F;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    background-color: #354d96;
 }
 
 h1 {
-    font-size: 60px;
-    text-align: center;
-    margin: 0;
-    padding: 20px 0;
-    color: #00539F;
-    text-shadow: 3px 3px 1px black;
+    display: inline-block;
 }
-  
-p, li, a {
+
+select {
+    width: 45%;
+    display: inline-block;
+}
+
+.nav__responsive-ul {
+    display: none;
+}
+
+header {
+    display: block;
+    width: 100%;
+    position: fixed;
+    background-color: #006496;
+}
+
+.nav__li {
+    display: inline-block;
+    padding: 9px;
+}
+
+.nav__li a {
+    color: #222;
+    text-decoration: none;
+}
+
+.nav__li:hover > a {
+    color: gray;
+}
+
+/*p, li, a {
     font-size: 16px;
     line-height: 2;
     letter-spacing: 1px;
 }
+*/
 
-a:hover {
-    color: red;
-    border: 1px solid black;
-}
-
-body {
-    width: 1000px;
-    margin: 0 auto;
+#contenido {
     background-color: #FF9500;
-    padding: 0 20px 20px 20px;
-    border: 5px solid black;
+    padding: 80px 0px 0px 0px;
 }
 
-img {
+[alt="Logo"] {
+    display: inline-block;
+    width: 3em;
+}
+
+[alt="Cursos"] {
     display: block;
-    margin: 0 auto;
+    margin: 0px auto;
+    width: 75%;
+}
+
+aside img {
+    display: inline;
+    width: 10em;
+}
+
+.nav {
+    display: inline-block;
+    top: 0;
+    right: 0;
+}
+
+.nav__responsive-button {
+    display: none;
+}
+
+@media only screen and (max-width: 850px) {
+    .nav__ul {
+        display: none;
+    }
+
+    .nav__responsive-ul {
+        display: block;
+        background-color: #808080aa;
+    }
+
+    .nav__responsive-li a {
+        color: #222;
+        text-decoration: none;
+    }
+    
+    .nav__responsive-li:hover > a {
+        color: gray;
+    }
+
+    .nav {
+        display: block;
+        height: 1px;
+    }
+
+    .nav__responsive-button {
+        display: inline-block;
+        position: absolute;
+        top: 22px;
+        right: 10px;
+        font-size: 20px;
+        padding: 0px 20px auto auto;
+    }
 }
